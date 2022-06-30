@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title> background 속성 </title>
+	
+	<style>
+		h3{color:red}
+		h3::after{content: " (ⓒsblim)"; font-size:10pt}
+		td{width:100px; height:100px}
+		
+		#first {background-image:url(flower.jpg); background-repeat:repeat-x}
+		#second {background-image:url(flower.jpg); background-repeat:repeat}
+		#third {background-image:url(flower.jpg);
+				background-repeat:no-repeat;
+				background-position:bottom}
+	</style>
+	
+</head>
+<body>
+	<h3>CSS 배경관련 속성</h3>
+	
+	<table border="1">
+		<tr>
+			<td id="first"> repeat-x </td>
+			<td id="second"> repeat </td>
+			<td id="third"> no-repeat </td>
+		</tr>
+	</table>
+</body>
+</html>
+
+
+
