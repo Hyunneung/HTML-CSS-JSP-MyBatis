@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> innerHTML - 테이블 </title>
+		<style>
+			table {text-align:center; margin: 0 auto;}
+			caption {color:green; font-size:30px}
+			th:first-child{width:100px; height:50px}
+			th:last-child{width:500px}
+			td{height:40px}
+			tr:first-child{background:darkgreen; color: white}
+			tr:nth-child(2n){background:lightgreen}
+			tr:hover{background:orange}
+		</style>
+</head>
+<body>
+	<script>
+		var list;
+		list += "<table>";
+		list += "<caption> 베스트셀러 </caption> ";
+		list += "<tbody>";
+		list += "<tr>";
+		list += "<th>순위</th> <th>제목</th>";
+		list += "</tr>";
+		list += "<tr>";
+		list += "<td>1</td> <td>대한민국 전국 맛집</td>";
+		list += "</tr>";
+		list += "<tr>";
+		list += "<td>2</td> <td>지적 대화를 위한 넓고 얕은 지식</td>";
+		list += "</tr>";
+		list += "<tr>";
+		list += "<td>3</td> <td>베스트셀러 절대로 읽지 마라</td>";
+		list += "</tr>";
+		list += "</tbody>";
+		list += "<tfoot>";
+		list += "간단한 화면 출력";
+		list += "</tfoot>";
+		list += "</table>";
+		
+		document.body.innerHTML = list;
+	</script>
+</body>
+</html>
