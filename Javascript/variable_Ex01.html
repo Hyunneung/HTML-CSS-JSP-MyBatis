@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Javascript 변수</title>
+	<script>
+		// string
+		var name = "홍길동", alias="자바스크립트";
+		document.write(name + "<br>");
+		document.write(alias + "<br>");
+		document.write(typeof(name) + "<br>");
+		document.write(typeof(alias) + "<br>");
+		document.write(typeof alias + "<br><hr>");
+		
+		// number
+		var start = 0, end =123.45;
+		document.write(start + "<br>");
+		document.write(end + "<br>");
+		document.write(typeof(start) + "<br>");
+		document.write(typeof(end) + "<br><hr>");
+		
+		// boolean
+		var booleanVar = true;
+		document.write(booleanVar + "<br>");
+		document.write(typeof(booleanVar) + "<br><hr>");
+		
+		// function
+		var functionVar = function() { alert("hello!"); };
+		document.write(functionVar + "<br>");
+		document.write(typeof(functionVar) + "<br><hr>");
+		functionVar();  // 함수 실행
+		
+		// object(객체)
+		var objectVar1 = {};
+		document.write(objectVar1 + "<br>")
+		document.write(typeof(objectVar1) + "<br>");
+		
+		var objectVar2 = new Object();
+		document.write(objectVar2 + "<br>")
+		document.write(typeof(objectVar2) + "<br>");
+		
+		var objectVar3 = null;
+		document.write(objectVar3 + "<br>")
+		document.write(typeof(objectVar3) + "<br><hr>");
+		
+		// undefined
+		var noVar;
+		document.write(noVar + "<br>")
+		document.write(typeof(noVar) + "<br>");  // 선언 했지만 값을 할당하지 않은 경우
+		document.write(typeof(a) + "<br>")  // 선언되지 않은 변수
+	</script>
+</head>
+<body>
+</body>
+</html>

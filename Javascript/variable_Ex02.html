@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Javascript 변수 형변환</title>
+	<script>
+		// 숫자와 문자열 자료형 변환
+		var a = "3";  // string
+		var b = 2;    // number
+		
+		var c = b + 5 + a;  // c값은 (b+5) 계산된 후 문자열 3 연결
+		document.write(c + "<br>");  // 73
+		document.write(typeof c + "<br>");  // string  
+		
+		var d = a + b + 1;  // d값은 "3"+"2"="32"로 문자열 연산(Concatention)
+		document.write(d + "<br>");  // 321
+		document.write('Number("3") + 2 + 1 = ' + (Number(a) + b + 1) + "<hr>");  // 7
+	
+		var a = true;  // boolean
+		document.write("a + 1 = " + (a + 1) + "<br>");  // 2 (true=1)
+		document.write("false + 1 = " + (false + 1) + "<hr>");  // 1 (false=0) 
+		
+		document.write("a + '10' = " + (a + '10') + "<br>");  // true10
+		document.write("false + '10' = " + (false + '10') + "<br>"); // false10
+	</script>
+</head>
+<body>
+</body>
+</html>
