@@ -1,0 +1,55 @@
+<!-- if -->
+<!-- 다음과 같은 북리스트가 존재하는 경우, 
+	 주문할 책 수량을 입력받고 그 수량만큼 책 제목을 번호로 선택해서 테이블로 출력하세요 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 책 주문 </title>
+	 <style>
+	 	table {margin: 0 auto; text-align:center; width:500px};
+	 	th:first-child {width:100px}
+	 	th{background:lightgrey}
+	 </style> 
+</head>
+<body>
+	<script>
+		var book1 = "Javascript";
+		var book2 = "HTML";
+		var book3 = "CSS";
+		var cart = prompt("주문할 책 수량을 입력하세요. (1권 이상)", 1);
+		var num = Number(cart);
+		
+		if (num == null) {  // 취소 선택
+			alert("취소를 선택하셨습니다.");
+		} else {  // 데이터 입력
+			if (isNaN(num)) {  // 숫자 아닐 때
+				alert("형식에 맞게 입력하세요. - 숫자로 1 이상을 입력합니다.");
+			} else {  // 숫자일 때
+				var list = "<table>";
+				list += "<caption> 도서 주문 목록 </caption>";
+				list += "<tr><th>번호</th> <th>제목</th></tr>";
+				for (var i = 1; i <= num ; i++) {
+					var book = prompt("책 번호를 선택하세요."
+									  + "\n1. " + book1 
+									  + "\n2. " + book2 
+									  + "\n3. " + book3 );
+					if(book == 1) {
+						list += "<tr><td> 1 </td> <td>" + book1 + "</td></tr>";
+					} else if(book == 2) {
+						list += "<tr><td> 2 </td> <td>" + book2 + "</td></tr>";
+					} else if(book == 3) {
+						list += "<tr><td> 3 </td> <td>" + book3 + "</td></tr>";
+					} else {
+						alert("리스트에 없는 책을 선택하셨습니다.");
+						i--;
+						continue;
+					}
+				}  // for 끝
+				list += "<table>";
+				document.body.innerHTML = list;
+			}
+		}
+	</script>
+</body>
+</html>
