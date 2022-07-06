@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+	<script>
+		var person = new Object();
+		
+		person.name = "홍길동";
+		person.age = 27;
+		person.height = 183;
+		person.blood = "O";
+		person.address = "서울시 중구";
+		person.print = function() {
+							var list ="";
+							for(var p in person) {
+								if(p != "print") 
+								list += p + ": " + person[p] + "<br>";
+							} document.body.innerHTML = list
+						};
+		person.print(); 
+		
+	</script>
+</body>
+</html>

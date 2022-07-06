@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 서적 정보 테이블 </title>
+	<style>
+		table {margin:0 auto; text-align:center; width:400px; border-collapse:collapse}
+		th {background:pink}
+		th, td {border: 1px solid grey;}
+		tr>td:hover {background:lightgrey}
+	
+	</style>
+
+</head>
+<body>
+	<script>
+		var book = {
+			title : "수미네 반찬",
+			publisher : "성안당",
+			author : "김수미",
+			price : 15300,
+			info : {
+				pages : 442,
+				date : "2010년 1월 30일",
+				ISBN10 : "8970506470",
+				size : "188*243mm"
+			}
+		};
+
+		var list = "<table>"
+		list += "<caption>서적 정보</caption>"
+		list += "<tr><th>항목(속성:property)</th> <th>내용(값:value)</th></tr>"
+
+		for ( var p in book) {
+			if (typeof (book[p]) != "object") {
+				list += "<tr><td>book." + p + "</td><td>" + book[p]
+				if (p == "price") { list += "원" }
+				list += "</td></tr>"
+			} else {
+				for ( var q in book[p]) {
+					list += "<tr><td>book." + p + "." + q + "</td><td>" + book[p][q] 
+					if (q == "pages") { list += "p" }
+					list += "</td></tr>"
+				} // q의 for 끝
+			} // if-else 끝
+		} // 출력하는 for 끝
+
+		list += "</table>"
+
+		document.body.innerHTML = list;
+	</script>
+</body>
+</html>
