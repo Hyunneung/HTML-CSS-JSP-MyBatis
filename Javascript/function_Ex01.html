@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>익명함수</title>
+</head>
+<body>
+	<script>
+		var functionNum = function() {
+			do {
+				var n = prompt("숫자를 입력하세요", "숫자");
+					if (isNaN(n)) {
+						alert("숫자로 입력하세요.");
+						continue;
+					} else {
+						alert("숫자가 맞습니다.");
+					}
+			} while (isNaN(n));
+			document.write(n);
+		}
+
+		functionNum();
+	</script>
+</body>
+</html>
