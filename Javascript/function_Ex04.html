@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>콜백함수</title>
+</head>
+<body>
+	<script>
+		// 함수 선언
+		function callFiveTimes(callback) {
+			for (var i = 0; i <= 5; i++) {
+				callback(i);
+			}
+		}
+
+		// 함수 호출
+		callFiveTimes(function(i) {
+			alert("i = " + i);
+		});
+	</script>
+</body>
+</html>
