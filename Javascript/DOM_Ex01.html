@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문서객체 가져오기</title>
+
+<style>
+	button { width:100px; height:30px;
+	 		 background:green; color:white; border:none;
+	 		 font-weight:bold }
+	button:disabled { cursor:not-allowed; background:grey }
+	button:hover { opacity:0.7; cursor:potinter }
+</style>
+
+<script>
+	window.onload= function() {
+		var img = document.getElementById('flower');
+		var change = ["cat.png","dog.jpg","Jellyfish.jpg"];
+		
+		var count = 0;
+		function imgchange() {
+			img.src = 'image/' + change[count++%change.length];
+		} 
+		
+		var start = document.getElementById('start'); // 시작 버튼
+		var stop = document.getElementById('stop'); // 정지 버튼
+		
+		stop.disabled = true;  // 첫 로드시 정지버튼 비활성
+		
+		// 시작 버튼 기능
+		start.onclick = function() {
+			end = setInterval(imgchange, 1000);
+			start.disabled = true;  // 시작버튼 비활성
+			stop.disabled = false;  // 정지버튼 활성
+		}
+		
+		// 정지 버튼 기능
+		stop.onclick = function() {
+			clearInterval(end);
+			stop.disabled = true;  // 정지버튼 비활성
+			start.disabled = false;  // 시작버튼 활성
+		}
+	}
+</script>
+
+</head>
+<body>
+	이미지 바꾸기
+	<br>
+	<img src="image/Koala.jpg" id="flower" width="500px" height="500px">
+	<br>
+	<button id="start">시작</button>
+	<button id="stop">정지</button>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
