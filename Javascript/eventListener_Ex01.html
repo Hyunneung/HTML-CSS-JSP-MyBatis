@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트리스너</title>
+<script>
+	window.onload = function() {
+		var picture = document.getElementById('cat');
+		
+		// 선언적함수
+		var changepicture = function() {
+			picture.src = "image/dog.jpg";
+		}
+		
+		// 이벤트 리스너
+		picture.addEventListener('click', changepicture);
+	}
+</script>
+</head>
+<body>
+	<img src="image/cat.png" id="cat">
+</body>
+</html>
