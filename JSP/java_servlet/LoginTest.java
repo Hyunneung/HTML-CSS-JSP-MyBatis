@@ -21,9 +21,9 @@ public class LoginTest extends HttpServlet {
 		String passwd = request.getParameter("passwd");
 		
 		PrintWriter out = response.getWriter();
-		out.println("À¥ ¾ÖÇÃ¸®ÄÉÀÌ¼Ç Á¤º¸: " + request.getContextPath());
-		out.println("<br>¾ÆÀÌµğ=" + id);
-		out.println("<br>ºñ¹Ğ¹øÈ£=" + passwd);
+		out.println("ì›¹ ì• í”Œë¦¬ì¼€ì´ì…˜ ì •ë³´: " + request.getContextPath());
+		out.println("<br>ì•„ì´ë””=" + id);
+		out.println("<br>ë¹„ë°€ë²ˆí˜¸=" + passwd);
 		out.close();
 	}
 }
