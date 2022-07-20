@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
 
 <%
-	request.setCharacterEncoding("euc-kr");  // post ¹æ½Ä ÇÑ±Û Ã³¸®	
+	request.setCharacterEncoding("euc-kr");  // post ë°©ì‹ í•œê¸€ ì²˜ë¦¬	
 
 	String name = request.getParameter("name");
 	String subject = request.getParameter("subject");
@@ -13,26 +13,26 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>ÆÄÀÏ ¾÷·Îµå È®ÀÎ ¹× ´Ù¿î·Îµå</title>
+<title>íŒŒì¼ ì—…ë¡œë“œ í™•ì¸ ë° ë‹¤ìš´ë¡œë“œ</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 	<div class="container" style="text-align:center">
-		<h4>ÆÄÀÏ ´Ù¿î·Îµå Æû</h4>
+		<h4>íŒŒì¼ ë‹¤ìš´ë¡œë“œ í¼</h4>
 		<table class="table table-bordered table-striped">
 			<tr>
-				<td>ÀÛ¼ºÀÚ</td><td><%=name%></td>
+				<td>ìž‘ì„±ìž</td><td><%=name%></td>
 			</tr>
 			<tr>
-				<td>Á¦¸ñ</td><td><%=subject%></td>
+				<td>ì œëª©</td><td><%=subject%></td>
 			</tr>
 			<tr>
-				<td>ÆÄÀÏ¸í</td><td><a href="fileDownload.jsp?file_name=<%=systemName%>"><%=origfileName%></a></td>
+				<td>íŒŒì¼ëª…</td><td><a href="fileDownload.jsp?file_name=<%=systemName%>"><%=origfileName%></a></td>
 			</tr>
 			<tr>
 				<td>uploadPath</td><td><%=uploadPath%></td>
 			</tr>
 		</table>
 	</div>
-</body>
+</body> 
 </html>
