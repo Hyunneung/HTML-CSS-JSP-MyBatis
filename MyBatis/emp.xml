@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="myBatis.Emp">
+
+	<select id="termlist" resultType="emp" parameterType="java.util.Map">
+		select * from emp
+		<where>
+			<if test='startday != "" and endday != ""'>
+				hiredate between #{startday} and #{endday}
+			</if>
+			<if test='deptno != ""'>
+				and deptno = #{deptno}
+			</if>
+		</where>
+	</select>
+	
+	<select id="checklist" resultType="emp" parameterType="java.util.Map">
+		select * from emp
+		<if test='deptnos != ""'>
+			where deptno in
+			<foreach collection="deptnos" item="deptno"
+					 open="("
+					 separator=","
+					 close=")">
+			#{deptno}
+			</foreach>
+		</if>
+		order by deptno
+	</select>
+	
+</mapper>
